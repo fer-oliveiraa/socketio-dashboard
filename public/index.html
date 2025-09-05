@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel em tempo real - Etapa 1</title>
+    <link rel="styleheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Painel em Tempo Real</h1>
+
+        <div>
+            <div class="label">Usuários Conectados</div>
+            <div id="total" class="stat">0</div>
+        </div>
+
+        <div style="margin-top: 12px;">
+            <div class="label">Room mais popular</div>
+        </div>
+
+        <div class="small">Atualização automática a cada 1 segundo</div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const totalEl = document.getElementById('total');
+        const popularEl = documente.getElementById('popular');
+
+        socket.on('dashboardData', (data) =>{
+            totalEl.textContent = data.totalUser;
+            popularEl.textContent = data.mostPopularRoom || '-';
+        });
+    </script>
+    
+</body>
+</html>
