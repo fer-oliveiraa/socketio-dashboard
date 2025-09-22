@@ -33,23 +33,23 @@ Esta atividade foi realizada como parte da matéria **Tópicos Avançados em Des
 
 ```
 git clone https://github.com/fer-oliveiraa/socketio-dashboard.git
-´´´
+```
 
 2. Instale as dependências:<br>
 
 ```
 npm install express socket.io
-´´´
+```
 
 3. Inicie o servidor:<br>
 ```
 node server.js
-´´´
+```
 
 4. Abra o navegador em:
 ```
 http://localhost:3000
-´´´
+```
 
 
 
