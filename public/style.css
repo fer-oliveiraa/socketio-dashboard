@@ -1,40 +1,72 @@
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", 'Segoe UI', Roboto, sans-serif;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: #f3f4f6;
-    margin: 0;   
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  margin: 0;   
 }
 
 .card {
- background: white;
- padding: 24px 32px;
- border-radius: 12px;
- box-shadow: 0 6px 18px rgba(0,0,0,0.08);
- text-align: center;
- width: 320px;   
+  background: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  width: 340px;   
 }
 
 h1 {
-    margin: 0 0 12px;
-    font-size: 20px;
+  margin: 0 0 12px;
+  font-size: 20px;
 }
 
 .stat {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 .label {
-    color: #555;
-    font-size: 14px;
+  color: #555;
+  font-size: 14px;
 }
 
 .small {
-    font-size: 13px;
-    color: #666;
-    margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-top: 12px;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 180px;
+  margin-right: 6px;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
 }

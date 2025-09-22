@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel em tempo real - Etapa 1</title>
-    <link rel="styleheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel em tempo real</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <h1>Painel em Tempo Real</h1>
+  <div class="card">
+    <h1>Painel em Tempo Real</h1>
 
-        <div>
-            <div class="label">Usuários Conectados</div>
-            <div id="total" class="stat">0</div>
-        </div>
-
-        <div style="margin-top: 12px;">
-            <div class="label">Room mais popular</div>
-        </div>
-
-        <div class="small">Atualização automática a cada 1 segundo</div>
+    <!-- Input para entrar na room -->
+    <div style="margin-bottom: 20px;">
+      <input type="text" id="roomInput" placeholder="Digite o nome da room" />
+      <button id="joinBtn">Entrar na Room</button>
     </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
+    <div>
+      <div class="label">Usuários Conectados</div>
+      <div id="total" class="stat">0</div>
+    </div>
 
-        const totalEl = document.getElementById('total');
-        const popularEl = documente.getElementById('popular');
+    <div style="margin-top: 12px;">
+      <div class="label">Room mais popular</div>
+      <div id="popular" class="stat">-</div>
+    </div>
 
-        socket.on('dashboardData', (data) =>{
-            totalEl.textContent = data.totalUser;
-            popularEl.textContent = data.mostPopularRoom || '-';
-        });
-    </script>
-    
+    <div style="margin-top: 20px;">
+      <div class="label">Ranking das Rooms</div>
+      <ul id="ranking" class="ranking-list"></ul>
+    </div>
+
+    <div class="small">Atualização automática a cada 1 segundo</div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
